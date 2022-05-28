@@ -1,0 +1,34 @@
+{
+  "data_path" : {
+    "input" : "dataset.csv",
+    "output" : "processed_dataset.csv",
+    "mmscaler_values" : "config/mmscaler_values.yaml"
+  },
+  "imp_features" : [
+    "Date Time",
+    "p (mbar)",
+    "T (degC)",
+    "rh (%)",
+    "VPact (mbar)",
+    "sh (g/kg)",
+    "H2OC (mmol/mol)",
+    "rho (g/m**3)",
+    "wv (m/s)",
+    "rain (mm)",
+    "SWDR (W/m**2)"
+  ],
+  "renamed_cols" : [
+    "time",
+    "pressure",
+    "tempereature",
+    "relative_humidity",
+    "vapour_pressure",
+    "specific_humidty",
+    "water_vap_concentration",
+    "airtight",
+    "wind_speed",
+    "rain",
+    "SWDR"
+  ],
+  "interpolation_method" : "slinear"
+}

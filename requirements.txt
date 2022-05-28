@@ -1,2 +1,6 @@
 dvc
 dvc[gdrive]
+numpy
+pandas
+scikit-learn
+torch
