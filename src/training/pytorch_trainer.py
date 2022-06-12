@@ -38,7 +38,7 @@ def trainer(model, train_dl, val_dl, loss_fn, optim, training_hp):
             val_loss += curr_loss.item()
         print(f"Train Loss : {'%.6f' % train_loss} || Validation Loss : {'%.6f' % val_loss}")
         train_loss_array.append(train_loss)
-        val_loss_array += [val_loss for _ in range(4)]
+        val_loss_array.append(val_loss)
         best_loss = save_best_model(curr_loss=val_loss,
                                     best_loss=best_loss,
                                     model=model,

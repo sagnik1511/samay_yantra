@@ -1,6 +1,6 @@
 dataset:
   path: "processed_dataset.csv"
-  batch_size: 10000
+  batch_size: 5000
   seq_length: 12
   split_ratio: 0.8
 model:
@@ -12,6 +12,6 @@ optimizer:
   lr: 0.0005
   betas: [0.9, 0.999]
 training_hp:
-  num_epochs: 2
+  num_epochs: 50
   log_index: 10
 
