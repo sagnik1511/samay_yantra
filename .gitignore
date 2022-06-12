@@ -3,3 +3,4 @@ venv
 __pycache__/
 dataset.csv
 processed_dataset.csv
+best_model.pt

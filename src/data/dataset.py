@@ -17,16 +17,17 @@ class WeatherDataset(Dataset):
         return X, y
 
 
-def split_data(dataframe, split_size=0.8):
+def split_data(dataframe, split_ratio=0.8):
     df = dataframe.copy()
-    split_index = int(split_size * len(df))
+    split_index = int(split_ratio * len(df))
     train_df = df.iloc[:split_index]
     val_df = df.iloc[split_index:]
 
     return train_df, val_df
 
 
-def create_loaders(train_set, val_set, batch_size, seq_length):
+def create_loaders(dataframe, split_ratio, batch_size, seq_length):
+    train_set, val_set = split_data(dataframe=dataframe, split_ratio=split_ratio)
     train_ds = WeatherDataset(train_set, seq_length)
     val_ds = WeatherDataset(val_set, seq_length)
 

@@ -1,4 +1,6 @@
+import torch
 import torch.nn as nn
+from torch.autograd import Variable
 
 
 class LSTM(nn.Module):
@@ -14,10 +16,25 @@ class LSTM(nn.Module):
                             num_layers=num_layers, batch_first=True)
         self.fc = nn.Linear(hidden_size, num_classes)
 
-    def forward(self, x):
-        x, _ = self.rnn(x)
-        s, b, h = x.shape
-        x = x.view(s*b, h)
-        x = self.reg(x)
-        x = x.view(s, b, -1)
-        return x
+    def forward(self, x, device):
+        h_0 = Variable(torch.zeros(
+            self.num_layers, x.size(0), self.hidden_size)).to(device)
+        c_0 = Variable(torch.zeros(
+            self.num_layers, x.size(0), self.hidden_size)).to(device)
+        _, (h_out, _) = self.lstm(x, (h_0, c_0))
+        h_out = h_out.view(-1, self.hidden_size)
+        out = self.fc(h_out)
+        return out
+
+
+def test():
+    b, s, c = 4, 12, 10
+    rand_value = torch.rand(b, s, c)
+
+    model = LSTM(num_classes=c, input_size=c, hidden_size=2, num_layers=1)
+    op = model(rand_value)
+    print(op.shape)
+
+
+if __name__ == "__main__":
+    test()
