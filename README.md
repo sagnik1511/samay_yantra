@@ -68,9 +68,19 @@ git clone https://github.com/sagnik1511/Tabular-AutoML.git
 pip install -r requirements.txt
 ```
 5. Installing the requirements.txt may generate some error due to outdated MS Visual C++ Build. You can fix this problem using [this](https://www.youtube.com/watch?v=rcI1_e38BWs).
-   
+
 # Approach :
-Will update soon :)
+1. Go to the root directory using `cd` command.
+2. The first step is to download the actual data into the project.Copy and run this command.
+```shell
+dvc pull
+```
+3. If you want to run the training process, simply change the configuration in `config/pt_training.yaml` and then run this command . Keep in mind that you have to stay at the root directory.
+```shell
+python -m src.training.pytorch_trainer
+```
+
+4. Further usage will be updated soon...
 
 # Results:
 You can visit [reports](https://github.com/sagnik1511/SamayYantra/tree/main/reports) directory where all the runs are stored. Currently, for some privacy issues, the mlflow runs are not shared in here.
