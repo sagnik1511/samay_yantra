@@ -60,7 +60,7 @@ def trainer(model, train_dl, val_dl, loss_fn, optim, job_config):
 
 
 def main():
-    job_config_path = "config/pt_cpu_training.yaml"
+    job_config_path = "config/pt_training.yaml"
     with open(job_config_path, "r") as f:
         job_config = yaml.safe_load(f)
         f.close()
