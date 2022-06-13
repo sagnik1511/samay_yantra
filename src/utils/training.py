@@ -19,12 +19,31 @@ def init_objects(job_config):
     print("Model Generated...")
     print(model)
     optim = torch.optim.Adam(params=model.parameters(),
-                             lr=job_config["optimizer"]["lr"],
-                             betas=tuple(job_config["optimizer"]["betas"]))
+                             lr=job_config["optimizer"]["lr"])
     print("Optimizer Generated...")
     loss_fn = torch.nn.MSELoss()
 
     return (train_dl, val_dl), model, optim, loss_fn
+
+
+def save_best_model_on_loss(curr_losses, best_losses, model, optim, track_on="validation"):
+    assert track_on in ["training", "validation"]
+    curr_train_loss, curr_val_loss = curr_losses
+    best_train_loss, best_val_loss = best_losses
+    if track_on == "training":
+        flag = save_best_model(curr_loss=curr_train_loss,
+                               best_loss=best_train_loss,
+                               model=model,
+                               optim=optim)
+    else:
+        flag = save_best_model(curr_loss=curr_val_loss,
+                               best_loss=best_val_loss,
+                               model=model,
+                               optim=optim)
+    if flag:
+        return curr_losses
+    else:
+        return best_losses
 
 
 def save_best_model(curr_loss, best_loss, model, optim):
@@ -35,11 +54,12 @@ def save_best_model(curr_loss, best_loss, model, optim):
         }
         torch.save(weights, "best_model.pt")
         print("Model Updated...")
+        print(f"Current best loss : {'%.6f'%curr_loss}")
+        return True
     else:
         print("Model didn't Updated...")
-    best_loss = min(curr_loss, best_loss)
-    print(f"Current best loss : {best_loss}")
-    return best_loss
+        print(f"Current best loss : {'%.6f' % best_loss}")
+        return False
 
 
 def save_training_curve(train_array, val_array):
