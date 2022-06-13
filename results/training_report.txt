@@ -1,0 +1,229 @@
+Configuration Loaded...
+{'dataset': {'path': 'processed_dataset.csv', 'batch_size': 5000, 'seq_length': 12, 'split_ratio': 0.8}, 'model': {'num_classes': 10, 'input_size': 10, 'hidden_size': 2, 'num_layers':
+1}, 'optimizer': {'lr': 0.0005}, 'training_hp': {'num_epochs': 10, 'log_index': 10}}
+Dataloaders Generated...
+Model Generated...
+LSTM(
+  (lstm): LSTM(10, 2, batch_first=True)
+  (fc): Linear(in_features=2, out_features=10, bias=True)
+)
+Optimizer Generated...
+Device found : cuda
+Model loaded on device...
+Epoch 1 :
+Step 0 Loss : 0.400730
+Step 10 Loss : 0.390075
+Step 20 Loss : 0.379931
+Step 30 Loss : 0.367938
+Step 40 Loss : 0.354751
+Step 50 Loss : 0.342859
+Step 60 Loss : 0.329298
+Step 70 Loss : 0.316875
+Step 80 Loss : 0.305422
+Step 90 Loss : 0.294833
+Step 100 Loss : 0.284875
+Step 110 Loss : 0.275529
+Step 120 Loss : 0.266353
+Step 130 Loss : 0.258478
+Step 140 Loss : 0.249010
+Train Loss : 45.733553 || Validation Loss : 8.782230
+Model Updated...
+Current best loss : 8.782230
+
+
+Epoch 2 :
+Step 0 Loss : 0.246973
+Step 10 Loss : 0.239489
+Step 20 Loss : 0.231310
+Step 30 Loss : 0.222712
+Step 40 Loss : 0.215650
+Step 50 Loss : 0.208018
+Step 60 Loss : 0.201227
+Step 70 Loss : 0.193382
+Step 80 Loss : 0.184516
+Step 90 Loss : 0.177906
+Step 100 Loss : 0.171014
+Step 110 Loss : 0.163382
+Step 120 Loss : 0.157045
+Step 130 Loss : 0.150653
+Step 140 Loss : 0.144826
+Train Loss : 27.613929 || Validation Loss : 5.089219
+Model Updated...
+Current best loss : 5.089219
+
+
+Epoch 3 :
+Step 0 Loss : 0.142830
+Step 10 Loss : 0.136966
+Step 20 Loss : 0.131699
+Step 30 Loss : 0.126804
+Step 40 Loss : 0.122074
+Step 50 Loss : 0.117513
+Step 60 Loss : 0.113231
+Step 70 Loss : 0.108528
+Step 80 Loss : 0.104816
+Step 90 Loss : 0.101312
+Step 100 Loss : 0.096990
+Step 110 Loss : 0.094033
+Step 120 Loss : 0.089982
+Step 130 Loss : 0.086228
+Step 140 Loss : 0.082436
+Train Loss : 15.721028 || Validation Loss : 2.940303
+Model Updated...
+Current best loss : 2.940303
+
+
+Epoch 4 :
+Step 0 Loss : 0.082047
+Step 10 Loss : 0.078933
+Step 20 Loss : 0.075038
+Step 30 Loss : 0.072082
+Step 40 Loss : 0.069719
+Step 50 Loss : 0.066482
+Step 60 Loss : 0.064385
+Step 70 Loss : 0.062030
+Step 80 Loss : 0.060018
+Step 90 Loss : 0.058719
+Step 100 Loss : 0.057207
+Step 110 Loss : 0.055559
+Step 120 Loss : 0.054028
+Step 130 Loss : 0.052832
+Step 140 Loss : 0.051676
+Train Loss : 9.110056 || Validation Loss : 1.936779
+Model Updated...
+Current best loss : 1.936779
+
+
+Epoch 5 :
+Step 0 Loss : 0.052366
+Step 10 Loss : 0.051080
+Step 20 Loss : 0.050515
+Step 30 Loss : 0.049729
+Step 40 Loss : 0.048244
+Step 50 Loss : 0.047954
+Step 60 Loss : 0.045566
+Step 70 Loss : 0.045765
+Step 80 Loss : 0.044726
+Step 90 Loss : 0.044683
+Step 100 Loss : 0.043754
+Step 110 Loss : 0.042881
+Step 120 Loss : 0.042125
+Step 130 Loss : 0.041396
+Step 140 Loss : 0.040874
+Train Loss : 6.564872 || Validation Loss : 1.578639
+Model Updated...
+Current best loss : 1.578639
+
+
+Epoch 6 :
+Step 0 Loss : 0.040972
+Step 10 Loss : 0.039978
+Step 20 Loss : 0.040800
+Step 30 Loss : 0.039807
+Step 40 Loss : 0.039929
+Step 50 Loss : 0.039873
+Step 60 Loss : 0.040065
+Step 70 Loss : 0.039826
+Step 80 Loss : 0.039482
+Step 90 Loss : 0.040380
+Step 100 Loss : 0.039739
+Step 110 Loss : 0.040256
+Step 120 Loss : 0.040269
+Step 130 Loss : 0.039535
+Step 140 Loss : 0.039283
+Train Loss : 5.723184 || Validation Loss : 1.546589
+Model Updated...
+Current best loss : 1.546589
+
+
+Epoch 7 :
+Step 0 Loss : 0.039914
+Step 10 Loss : 0.039406
+Step 20 Loss : 0.039742
+Step 30 Loss : 0.040374
+Step 40 Loss : 0.039554
+Step 50 Loss : 0.040020
+Step 60 Loss : 0.039124
+Step 70 Loss : 0.039243
+Step 80 Loss : 0.039483
+Step 90 Loss : 0.039072
+Step 100 Loss : 0.038611
+Step 110 Loss : 0.038497
+Step 120 Loss : 0.038803
+Step 130 Loss : 0.038428
+Step 140 Loss : 0.037840
+Train Loss : 5.607280 || Validation Loss : 1.460559
+Model Updated...
+Current best loss : 1.460559
+
+
+Epoch 8 :
+Step 0 Loss : 0.036983
+Step 10 Loss : 0.037550
+Step 20 Loss : 0.037424
+Step 30 Loss : 0.037318
+Step 40 Loss : 0.037119
+Step 50 Loss : 0.037172
+Step 60 Loss : 0.036731
+Step 70 Loss : 0.036120
+Step 80 Loss : 0.035058
+Step 90 Loss : 0.035926
+Step 100 Loss : 0.035322
+Step 110 Loss : 0.035502
+Step 120 Loss : 0.035048
+Step 130 Loss : 0.034890
+Step 140 Loss : 0.034707
+Train Loss : 5.159610 || Validation Loss : 1.327795
+Model Updated...
+Current best loss : 1.327795
+
+
+Epoch 9 :
+Step 0 Loss : 0.034557
+Step 10 Loss : 0.034898
+Step 20 Loss : 0.034155
+Step 30 Loss : 0.033752
+Step 40 Loss : 0.033506
+Step 50 Loss : 0.034096
+Step 60 Loss : 0.033892
+Step 70 Loss : 0.033634
+Step 80 Loss : 0.033149
+Step 90 Loss : 0.033251
+Step 100 Loss : 0.033261
+Step 110 Loss : 0.032598
+Step 120 Loss : 0.033227
+Step 130 Loss : 0.032869
+Step 140 Loss : 0.032903
+Train Loss : 4.798131 || Validation Loss : 1.240079
+Model Updated...
+Current best loss : 1.240079
+
+
+Epoch 10 :
+Step 0 Loss : 0.033113
+Step 10 Loss : 0.032516
+Step 20 Loss : 0.032675
+Step 30 Loss : 0.032951
+Step 40 Loss : 0.033049
+Step 50 Loss : 0.032906
+Step 60 Loss : 0.032652
+Step 70 Loss : 0.033128
+Step 80 Loss : 0.032546
+Step 90 Loss : 0.032942
+Step 100 Loss : 0.033307
+Step 110 Loss : 0.033222
+Step 120 Loss : 0.033647
+Step 130 Loss : 0.033756
+Step 140 Loss : 0.034032
+Train Loss : 4.724269 || Validation Loss : 1.260879
+Model didn't Updated...
+Current best loss : 1.240079
+
+
+2022/06/13 19:36:28 WARNING mlflow.utils.requirements_utils: Found torch version (1.11.0+cu113) contains a local version label (+cu113). MLflow logged a pip requirement for this packag
+e as 'torch==1.11.0' without the local version label to make it installable from PyPI. To specify pip requirements containing local version labels, please use `conda_env` or `pip_requi
+rements`.
+2022/06/13 19:36:34 WARNING mlflow.utils.requirements_utils: Found torch version (1.11.0+cu113) contains a local version label (+cu113). MLflow logged a pip requirement for this packag
+e as 'torch==1.11.0' without the local version label to make it installable from PyPI. To specify pip requirements containing local version labels, please use `conda_env` or `pip_requi
+rements`.
+Training Completed...

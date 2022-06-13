@@ -11,6 +11,6 @@ model:
 optimizer:
   lr: 0.0005
 training_hp:
-  num_epochs: 2
+  num_epochs: 10
   log_index: 10
 

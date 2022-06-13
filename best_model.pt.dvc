@@ -1,4 +1,4 @@
 outs:
-- md5: a400e17b6b89d32df86df36e418b05b0
+- md5: 1886f4f99f525d703077729a9a07c8ce
   size: 6072
   path: best_model.pt
