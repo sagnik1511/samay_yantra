@@ -67,6 +67,6 @@ def save_training_curve(train_array, val_array):
     plt.plot(train_array, label="training_loss")
     plt.plot(val_array, label="validation_loss")
     plt.legend()
-    plt.savefig("training_metrics.png")
+    plt.savefig("results/training_metrics.png")
     plt.close()
 
