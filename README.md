@@ -3,7 +3,7 @@
 <h3>Weather Prediction of Beutenberg using time series forcasting with deep learning</h3>
 <img width="600px" src="https://socialify.git.ci/sagnik1511/samay_yantra/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Circuit%20Board&theme=Dark" 
 alt="banner">
-<h1>Asteroid Classification</h1>
+<h1>Samay Yantra</h1>
 <img src="https://forthebadge.com/images/badges/built-with-love.svg">
 <img src="https://forthebadge.com/images/badges/made-with-python.svg">
 <img src="https://forthebadge.com/images/badges/built-with-science.svg">
