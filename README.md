@@ -3,7 +3,7 @@
 <h3>Weather Prediction of Beutenberg using time series forcasting with deep learning</h3>
 <img width="600px" src="https://socialify.git.ci/sagnik1511/samay_yantra/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Circuit%20Board&theme=Dark" 
 alt="banner">
-<h1>Asteroid Classification</h1>
+<h1>Samay Yantra</h1>
 <img src="https://forthebadge.com/images/badges/built-with-love.svg">
 <img src="https://forthebadge.com/images/badges/made-with-python.svg">
 <img src="https://forthebadge.com/images/badges/built-with-science.svg">
@@ -54,8 +54,20 @@ The data follows a strict data science project structure.
             └── visualization
             
 # Installation and Usage :
-All the installation and usage techniques are shared in [getting_started.md](https://github.com/sagnik1511/Asteroid-Classification/blob/dev/docs/getting_started.md) 
-and in [commands.md](https://github.com/sagnik1511/Asteroid-Classification/blob/dev/docs/commands.md)
+<div align="center"><h1>Installation</h1></div>
+
+
+1. Create a Virtual Environment : [Tutorial](https://docs.python.org/3/library/venv.html)
+2. Clone the repository by running this command.
+```shell
+git clone https://github.com/sagnik1511/Tabular-AutoML.git
+```
+3. Open the directory with *cmd*.
+4. Copy this command in terminal to install dependencies.
+```shell
+pip install -r requirements.txt
+```
+5. Installing the requirements.txt may generate some error due to outdated MS Visual C++ Build. You can fix this problem using [this](https://www.youtube.com/watch?v=rcI1_e38BWs).
    
 # Approach :
 Will update soon :)
