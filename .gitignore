@@ -1,6 +1,7 @@
 venv
 .idea/
 __pycache__/
+mlruns/
 dataset.csv
 processed_dataset.csv
 best_model.pt
