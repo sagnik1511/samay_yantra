@@ -60,7 +60,7 @@ The data follows a strict data science project structure.
 1. Create a Virtual Environment : [Tutorial](https://docs.python.org/3/library/venv.html)
 2. Clone the repository by running this command.
 ```shell
-git clone https://github.com/sagnik1511/Tabular-AutoML.git
+git clone https://github.com/sagnik1511/samay_yantra.git
 ```
 3. Open the directory with *cmd*.
 4. Copy this command in terminal to install dependencies.
