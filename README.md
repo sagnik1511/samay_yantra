@@ -88,7 +88,7 @@ You can visit [reports](https://github.com/sagnik1511/SamayYantra/tree/main/repo
 <div align="center">
 <h1>Thanks for visiting :D</h1>
 <h3>Do STAR if you find it useful</h3>
-<img src="https://swall.teahub.io/photos/small/185-1857418_the-witcher-21-9-wallpaper-witcher-3.jpg?">
+<img src="https://freefrontend.com/assets/img/css-weather-icons/Animated-Weather-Icons.gif?">
 </div>
 
 
