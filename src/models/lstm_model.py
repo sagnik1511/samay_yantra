@@ -15,6 +15,7 @@ class LSTM(nn.Module):
         self.lstm = nn.LSTM(input_size=input_size, hidden_size=hidden_size,
                             num_layers=num_layers, batch_first=True)
         self.fc = nn.Linear(hidden_size, num_classes)
+        self.sigmoid = nn.Sigmoid()
 
     def forward(self, x, device):
         h_0 = Variable(torch.zeros(
@@ -23,7 +24,7 @@ class LSTM(nn.Module):
             self.num_layers, x.size(0), self.hidden_size)).to(device)
         _, (h_out, _) = self.lstm(x, (h_0, c_0))
         h_out = h_out.view(-1, self.hidden_size)
-        out = self.fc(h_out)
+        out = self.sigmoid(self.fc(h_out))
         return out
 
 

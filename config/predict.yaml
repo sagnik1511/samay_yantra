@@ -1,16 +1,9 @@
 dataset:
   path: "processed_dataset.csv"
-  batch_size: 5000
   seq_length: 20
-  split_ratio: 0.8
 model:
   num_classes: 10
   input_size: 10
   hidden_size: 2
   num_layers: 1
-optimizer:
-  lr: 0.0005
-training_hp:
-  num_epochs: 10
-  log_index: 10
-
+  checkpoint_path: "best_model.pt"
