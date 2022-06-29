@@ -30,7 +30,7 @@ def save_best_model_on_loss(curr_losses, best_losses, model, optim, track_on="va
     assert track_on in ["training", "validation"]
     curr_train_loss, curr_val_loss = curr_losses
     best_train_loss, best_val_loss = best_losses
-    if track_on == "training":
+    if track_on == "engine":
         flag = save_best_model(curr_loss=curr_train_loss,
                                best_loss=best_train_loss,
                                model=model,
@@ -62,11 +62,26 @@ def save_best_model(curr_loss, best_loss, model, optim):
         return False
 
 
-def save_training_curve(train_array, val_array):
-    plt.figure(figsize=(20, 6))
-    plt.plot(train_array, label="training_loss")
-    plt.plot(val_array, label="validation_loss")
-    plt.legend()
-    plt.savefig("results/training_metrics.png")
-    plt.close()
+def save_training_curve(train_dict, val_dict):
+    for name in val_dict.keys():
+        plt.figure(figsize=(20, 6))
+        plt.plot(train_dict[name], label=f"train_{name}")
+        plt.plot(val_dict[name], label=f"train_{name}")
+        plt.legend()
+        plt.savefig(f"results/{name}.png")
+        plt.close()
+
+
+def update_metric_dict(true, pred, metric_dict, res_dict):
+    if true.device != "cpu":
+        true = true.cpu()
+        pred = pred.cpu()
+    true = true.detach().numpy().reshape(-1)
+    pred = pred.detach().numpy().reshape(-1)
+    for name, metric in metric_dict.items():
+        res_dict[name].append(metric(true, pred))
+
+    return res_dict
+
+
 

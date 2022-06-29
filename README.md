@@ -77,7 +77,7 @@ dvc pull
 ```
 3. If you want to run the training process, simply change the configuration in `config/pt_training.yaml` and then run this command . Keep in mind that you have to stay at the root directory.
 ```shell
-python -m src.training.pytorch_trainer
+python -m src.engine.pytorch_trainer
 ```
 
 4. Further usage will be updated soon...
